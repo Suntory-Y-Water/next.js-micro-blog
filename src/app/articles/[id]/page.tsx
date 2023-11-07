@@ -1,8 +1,9 @@
 import { getDatailArticle } from '@/api/blogAPI';
+import DeleteButton from '@/app/components/DeleteButton';
 import Image from 'next/image';
 import React from 'react';
 
-const Alticle = async ({ params }: { params: { id: string } }) => {
+const Article = async ({ params }: { params: { id: string } }) => {
   const detailArticle = await getDatailArticle(params.id);
 
   return (
@@ -17,8 +18,11 @@ const Alticle = async ({ params }: { params: { id: string } }) => {
       <div className='text-lg leading-relaxed text-justify'>
         <p>{detailArticle.content}</p>
       </div>
+      <div className='text-right mt-3'>
+        <DeleteButton id={detailArticle.id} />
+      </div>
     </div>
   );
 };
 
-export default Alticle;
+export default Article;
