@@ -16,6 +16,7 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
           alt='Article Image'
           width={1280}
           height={300}
+          priority
         />
       </Link>
       <div className='bg-white flex flex-col p-6'>
