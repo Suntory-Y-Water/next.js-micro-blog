@@ -12,7 +12,7 @@ const Header = () => {
       <nav className='text-sm font-medium'>
         <Link
           href={'/articles/new'}
-          className='bg-green-600 hover:bg-green-500 px-3 py-3 rounded-md'
+          className='py-3 px-3 rounded-md bg-green-600 hover:bg-green-500'
         >
           記事を書く
         </Link>
