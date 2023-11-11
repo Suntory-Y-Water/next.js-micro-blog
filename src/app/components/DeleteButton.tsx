@@ -21,10 +21,10 @@ const DeleteButton = ({ id }: DeleteButtonProps) => {
 
   return (
     <div
-      className='bg-red-500 hover:bg-red-400 rounded py-2 px-5 inline cursor-pointer'
+      className='bg-red-500 hover:bg-red-400 py-3 px-3 font-medium rounded-md inline cursor-pointer'
       onClick={handleDelete}
     >
-      削除
+      削除する
     </div>
   );
 };

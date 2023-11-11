@@ -20,16 +20,15 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
         />
       </Link>
       <div className='bg-white flex flex-col p-6'>
-        <Link href='#' className='text-blue-700 pb-4 font-bold'>
-          Technology
-        </Link>
         <Link
           href={`articles/${article.id}`}
           className='text-slate-700 text-3xl font-bold hover:text-slate-950'
         >
           {article.title}
         </Link>
-        <p className='text-sm pb-3 text-slate-700'>Publish on {article.createdAt}</p>
+        <p className='text-sm pb-3 text-slate-700'>
+          Publish on {article.created_at && new Date(article.created_at).toLocaleDateString()}
+        </p>
         <Link href={`articles/${article.id}`} className='text-slate-700 pb-6'>
           {article.content.length > 70 ? article.content.substring(0, 70) + '...' : article.content}
         </Link>
