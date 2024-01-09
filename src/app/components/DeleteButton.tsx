@@ -1,6 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import React from 'react';
+import { config } from '@/lib/config';
 
 type DeleteButtonProps = {
   id: string;
@@ -9,9 +10,7 @@ type DeleteButtonProps = {
 const DeleteButton = ({ id }: DeleteButtonProps) => {
   const router = useRouter();
   const handleDelete = async () => {
-    const API_URL = process.env.NEXT_PUBLIC_API_URL;
-
-    await fetch(`${API_URL}/api/blog/${id}`, {
+    await fetch(`${config.API_URL}/api/blog/${id}`, {
       method: 'DELETE',
     });
 

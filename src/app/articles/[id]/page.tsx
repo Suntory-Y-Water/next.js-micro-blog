@@ -1,14 +1,10 @@
 import DeleteButton from '@/app/components/DeleteButton';
 import Image from 'next/image';
 import React from 'react';
+import { config } from '@/lib/config';
 
 const Article = async ({ params }: { params: { id: string } }) => {
-  const API_URL = process.env.NEXT_PUBLIC_API_URL;
-  const res = await fetch(`${API_URL}/api/blog/${params.id}`, {
-    next: {
-      revalidate: 60,
-    },
-  });
+  const res = await fetch(`${config.API_URL}/api/blog/${params.id}`, { next: { revalidate: 60 } });
   const detailArticle = await res.json();
 
   return (
