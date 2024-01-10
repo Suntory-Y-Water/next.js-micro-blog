@@ -9,12 +9,18 @@ const Header = () => {
           <Link href={'/'}>Next.js 13 Blog</Link>
         </h1>
       </div>
-      <nav className='text-sm font-medium'>
+      <nav className='text-sm font-medium flex'>
+        <Link href={'/python'} className='py-3 px-8 mx-4 rounded-md bg-blue-600 hover:bg-blue-500'>
+          Python(FastAPI)
+        </Link>
         <Link
-          href={'/articles/new'}
-          className='py-3 px-3 rounded-md bg-green-600 hover:bg-green-500'
+          href={'/javascript'}
+          className='py-3 px-8 mx-4 rounded-md bg-yellow-600 hover:bg-yellow-500'
         >
-          記事を書く
+          JavaScript(Express)
+        </Link>
+        <Link href={'/java'} className='py-3 px-8 mx-4 rounded-md bg-red-600 hover:bg-red-500'>
+          Java(SpringBoot)
         </Link>
       </nav>
     </header>
