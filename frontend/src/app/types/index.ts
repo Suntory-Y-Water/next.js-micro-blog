@@ -1,6 +1,10 @@
+/**
+ * ブログ情報を表す型
+ *
+ */
 export type Article = {
   id: string;
   title: string;
   content: string;
-  created_at: string;
+  createdAt: string;
 };

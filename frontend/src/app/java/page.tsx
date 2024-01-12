@@ -1,10 +1,16 @@
 import Link from 'next/link';
 import ArticleList from './components/ArticleList';
 import { config } from '@/lib/config';
+import { Article } from '../types';
+
+const fetchData = async () => {
+  const res = await fetch(`${config.JAVA_API_URL}/api/java/blog`, { cache: 'no-store' });
+  const articles: Article[] = await res.json();
+  return articles;
+};
 
 export default async function Home() {
-  const res = await fetch(`${config.API_URL}/api/blog`, { cache: 'no-store' });
-  const articles = await res.json();
+  const articles = await fetchData();
 
   return (
     <div className='md:flex '>

@@ -2,10 +2,13 @@ import DeleteButton from '@/app/components/DeleteButton';
 import Image from 'next/image';
 import React from 'react';
 import { config } from '@/lib/config';
+import { Article } from '@/app/types';
 
 const Article = async ({ params }: { params: { id: string } }) => {
-  const res = await fetch(`${config.API_URL}/api/blog/${params.id}`, { next: { revalidate: 60 } });
-  const detailArticle = await res.json();
+  const res = await fetch(`${config.JAVA_API_URL}/api/java/blog/${params.id}`, {
+    next: { revalidate: 60 },
+  });
+  const detailArticle: Article = await res.json();
 
   return (
     <div className='max-w-3xl mx-auto p-5'>

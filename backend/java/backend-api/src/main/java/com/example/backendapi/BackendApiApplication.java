@@ -9,11 +9,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @SpringBootApplication
 public class BackendApiApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BackendApiApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BackendApiApplication.class, args);
+    }
 
-	// CORSの設定
+    // CORSの設定
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
