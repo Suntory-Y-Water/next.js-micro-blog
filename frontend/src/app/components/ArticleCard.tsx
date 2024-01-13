@@ -1,16 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { Article } from '../types';
+import { Article } from '@/app/types';
 
-type ArticleCardProps = {
+interface ArticleCardProps {
   article: Article;
-};
+  baseUrl: string;
+}
 
-const ArticleCard = ({ article }: ArticleCardProps) => {
+const ArticleCard = ({ article, baseUrl }: ArticleCardProps) => {
   return (
     <article className='shadow flex flex-col my-4' key={article.id}>
-      <Link href={`articles/${article.id}`} className='hover:opacity-75'>
+      <Link href={`${baseUrl}articles/${article.id}`} className='hover:opacity-75'>
         <Image
           src={`https://source.unsplash.com/collection/1346951/1000x500?sig${article.id}}`}
           alt='Article Image'
@@ -21,7 +22,7 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
       </Link>
       <div className='bg-white flex flex-col p-6'>
         <Link
-          href={`articles/${article.id}`}
+          href={`${baseUrl}articles/${article.id}`}
           className='text-slate-700 text-3xl font-bold hover:text-slate-950'
         >
           {article.title}
@@ -29,10 +30,13 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
         <p className='text-sm pb-3 text-slate-700'>
           Publish on {article.createdAt && new Date(article.createdAt).toLocaleDateString()}
         </p>
-        <Link href={`articles/${article.id}`} className='text-slate-700 pb-6'>
+        <Link href={`${baseUrl}articles/${article.id}`} className='text-slate-700 pb-6'>
           {article.content.length > 70 ? article.content.substring(0, 70) + '...' : article.content}
         </Link>
-        <Link href={`articles/${article.id}`} className='text-pink-600 hover:text-slate-950'>
+        <Link
+          href={`${baseUrl}articles/${article.id}`}
+          className='text-pink-600 hover:text-slate-950'
+        >
           続きを読む
         </Link>
       </div>

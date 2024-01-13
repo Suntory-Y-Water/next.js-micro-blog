@@ -2,6 +2,7 @@
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { config } from '@/lib/config';
 
 const CreateBlogPage = () => {
   const router = useRouter();
@@ -17,8 +18,7 @@ const CreateBlogPage = () => {
     // リクエストボディにuuidをセット
     const id = uuidv4();
 
-    const API_URL = process.env.NEXT_PUBLIC_API_URL;
-    await fetch(`${API_URL}/api/blog`, {
+    await fetch(`${config.JAVA_API_URL}/api/java/blog`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -27,6 +27,7 @@ const CreateBlogPage = () => {
         id,
         title,
         content,
+        craetedAt: new Date().toISOString(),
       }),
     });
 
