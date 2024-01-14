@@ -20,7 +20,10 @@ public class BackendApiApplication {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // すべてのエンドポイントに適用
-                        .allowedOrigins("http://localhost:3000") // フロントエンドのオリジンを許可
+                        .allowedOrigins(
+                            "http://localhost:3000", // ローカルホスト
+                            "http://frontend:3000"   // Docker 内のサービス名
+                        )
                         .allowedMethods("GET", "POST", "PUT", "DELETE"); // 許可するHTTPメソッド
             }
         };
