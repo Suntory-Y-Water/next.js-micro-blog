@@ -7,7 +7,7 @@ const ArticlePage = async ({ params }: { params: { id: string } }) => {
   const res = await fetch(apiUrl);
   const detailArticle = await res.json();
 
-  return <ArticleContent params={detailArticle} apiUrl={apiUrl} />;
+  return <ArticleContent params={detailArticle} apiUrl={`${config.FRONTEND_JAVA_API_URL}/api/java/blog/${params.id}`} />;
 };
 
 export default ArticlePage;

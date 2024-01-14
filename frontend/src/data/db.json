@@ -1,46 +1,34 @@
 {
   "articles": [
     {
-      "id": "97fc239d-6f2b-401d-9ca9-91eadab9e456",
-      "title": "あ",
-      "content": "あ",
-      "created_at": "2024-01-13T11:00:47.671Z"
+      "id": "32d19e87-e66b-4e4e-ab0e-6a5b7ff190fc",
+      "title": "denaikana",
+      "content": "\naa\n",
+      "createdAt": "2024-01-14T00:32:52.451Z"
     },
     {
-      "id": "0b91a979-b4b1-4c24-978a-531931fd3c12",
-      "title": "kaitori rudeadayo",
-      "content": "rudeadayo",
-      "created_at": "2024-01-13T11:04:11.523Z"
+      "id": "293647ac-5207-4e11-a67d-59fe2b2f4f49",
+      "title": "ｄふぁ",
+      "content": "ふぁｓｄｆ",
+      "createdAt": "2024-01-14T00:39:58.719Z"
     },
     {
-      "id": "c4ad1504-3e89-4768-8672-5c0a50297226",
-      "title": "今日は薬屋の独り言",
-      "content": "あああ",
-      "created_at": "2024-01-13T11:04:37.847Z"
+      "id": "4e243995-dead-4548-9091-a61cd000ade5",
+      "title": "いまの時間",
+      "content": "2024年1月14日9:41",
+      "createdAt": "2024-01-14T00:41:18.546Z"
     },
     {
-      "id": "190beb64-4c02-4433-bf48-1e6f4ef5af50",
-      "title": "あああ",
-      "content": "あああ",
-      "created_at": "2024-01-13T11:09:11.788Z"
+      "id": "19006aaf-9b45-41d9-80c2-dd730d69ed37",
+      "title": "よろしくね！",
+      "content": "ありがとう",
+      "createdAt": "2024-01-14T06:40:16.177Z"
     },
     {
-      "id": "3f9ac48e-3c31-45ab-88fb-c24f92cb303f",
-      "title": "よろしくな",
-      "content": "よろしくな\n",
-      "created_at": "2024-01-13T11:10:49.708Z"
-    },
-    {
-      "id": "9f0155d0-ac9c-4ab8-8c35-bf6e30ae6a92",
-      "title": "ありがとう",
-      "content": "ございました\n",
-      "created_at": "2024-01-13T11:11:04.431Z"
-    },
-    {
-      "id": "32ca5ab6-8624-4858-a46e-09602598b8a9",
-      "title": "対戦ありがとうございました",
-      "content": "あああ",
-      "created_at": "2024-01-13T12:05:30.436Z"
+      "id": "39ff2874-5c47-4ed9-b2b9-2a416a3c8141",
+      "title": "Dockerで動かしているけど速度遅すぎないか？",
+      "content": "こういうもんなのかなにかの遅延なのかわからない",
+      "createdAt": "2024-01-14T07:10:41.946Z"
     }
   ]
 }

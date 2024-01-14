@@ -19,7 +19,7 @@ const DeleteButton = ({ apiUrl }: DeleteButtonProps) => {
 
   return (
     <div
-      className='bg-red-500 hover:bg-red-400 py-3 px-3 font-medium rounded-md inline cursor-pointer'
+      className='bg-red-600 hover:bg-red-500 py-3 px-3 font-medium rounded-md inline cursor-pointer'
       onClick={handleDelete}
     >
       削除する

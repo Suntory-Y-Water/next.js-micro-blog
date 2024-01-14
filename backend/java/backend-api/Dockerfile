@@ -1,9 +1,11 @@
+# Java 17のベースイメージを使用
 FROM openjdk:17
 
+# 作業ディレクトリを設定
 WORKDIR /app
 
-# 親ディレクトリからbackend/java/backend-apiディレクトリにあるファイルをコピー
-COPY ./backend/java/backend-api /app
+# ここでのコピーは、Dockerfileの位置（backend/java/backend-api）を基準としています
+COPY . /app
 
 # Mavenを使用して依存関係をインストールし、アプリケーションをビルド
 RUN ./mvnw install -DskipTests
