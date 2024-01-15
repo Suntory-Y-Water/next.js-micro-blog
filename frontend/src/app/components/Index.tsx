@@ -10,7 +10,7 @@ const Index = async ({
   params: PageAndApiUrlProps;
   pageContent: PageAsideContentProps;
 }) => {
-  const res = await fetch(`${params.baseUrl}/${params.apiUrl}`, { cache: 'no-store' });
+  const res = await fetch(`${params.baseUrl}/${params.apiUrl}`, {cache: "no-store"});
   const articles: Article[] = await res.json();
 
   return (

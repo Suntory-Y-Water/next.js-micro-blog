@@ -18,7 +18,7 @@ const CreateBlogPage = () => {
     // リクエストボディにuuidをセット
     const id = uuidv4();
 
-    await fetch(`${config.JAVA_API_URL}/api/java/blog`, {
+    await fetch(`${config.FRONTEND_JAVA_API_URL}/api/java/blog`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -27,10 +27,9 @@ const CreateBlogPage = () => {
         id,
         title,
         content,
-        craetedAt: new Date().toISOString(),
+        createdAt: new Date().toISOString(),
       }),
     });
-
     setLoading(false);
     // リダイレクト機能
     router.push('/java');

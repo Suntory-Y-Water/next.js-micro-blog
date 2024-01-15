@@ -11,7 +11,7 @@ export default async function Home() {
 
   const content: PageAsideContentProps = {
     title: 'Javaページ',
-    description: 'データの取得はSpringBootで行っています。',
+    description: 'Javaのページです。',
   };
 
   return <Index params={params} pageContent={content} />;

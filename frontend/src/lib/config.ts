@@ -4,4 +4,6 @@ export const config = {
   JAVA_API_URL: process.env.JAVA_API_URL,
   FRONTEND_JAVA_API_URL: process.env.NEXT_PUBLIC_JAVA_API_URL,
   API_PREFIX: process.env.API_PREFIX,
+  PYTHON_API_URL: process.env.PYTHON_API_URL,
+  FRONTEND_PYTHON_API_URL: process.env.NEXT_PUBLIC_PYTHON_API_URL,
 };
