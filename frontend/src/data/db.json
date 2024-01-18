@@ -1,34 +1,22 @@
 {
   "articles": [
     {
-      "id": "32d19e87-e66b-4e4e-ab0e-6a5b7ff190fc",
-      "title": "denaikana",
-      "content": "\naa\n",
-      "createdAt": "2024-01-14T00:32:52.451Z"
+      "id": "71e7d51f-5e68-42d1-8e8d-f3a890598037",
+      "title": "サーバー側でUUIDを生成",
+      "content": "多分問題ない",
+      "createdAt": "2024-01-17T11:14:44.422Z"
     },
     {
-      "id": "293647ac-5207-4e11-a67d-59fe2b2f4f49",
-      "title": "ｄふぁ",
-      "content": "ふぁｓｄｆ",
-      "createdAt": "2024-01-14T00:39:58.719Z"
+      "id": "1e46402f-1609-4095-a573-b9712193f869",
+      "title": "UUID",
+      "content": "aa",
+      "createdAt": "2024-01-18T13:23:59.591Z"
     },
     {
-      "id": "4e243995-dead-4548-9091-a61cd000ade5",
-      "title": "いまの時間",
-      "content": "2024年1月14日9:41",
-      "createdAt": "2024-01-14T00:41:18.546Z"
-    },
-    {
-      "id": "19006aaf-9b45-41d9-80c2-dd730d69ed37",
-      "title": "よろしくね！",
-      "content": "ありがとう",
-      "createdAt": "2024-01-14T06:40:16.177Z"
-    },
-    {
-      "id": "39ff2874-5c47-4ed9-b2b9-2a416a3c8141",
-      "title": "Dockerで動かしているけど速度遅すぎないか？",
-      "content": "こういうもんなのかなにかの遅延なのかわからない",
-      "createdAt": "2024-01-14T07:10:41.946Z"
+      "id": "8c7c0c5c-edf4-46b0-aae4-db16e9d800fa",
+      "title": "画面遷移してみる",
+      "content": "どうでしょうか？",
+      "createdAt": "2024-01-18T13:35:21.003Z"
     }
   ]
 }

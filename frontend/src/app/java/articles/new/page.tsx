@@ -1,7 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import { config } from '@/lib/config';
 
 const CreateBlogPage = () => {
@@ -15,22 +14,16 @@ const CreateBlogPage = () => {
 
     setLoading(true);
 
-    // リクエストボディにuuidをセット
-    const id = uuidv4();
-
-    await fetch(`${config.JAVA_API_URL}/api/java/blog`, {
+    await fetch(`${config.FRONTEND_JAVA_API_URL}/api/java/blog`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        id,
         title,
         content,
-        craetedAt: new Date().toISOString(),
       }),
     });
-
     setLoading(false);
     // リダイレクト機能
     router.push('/java');

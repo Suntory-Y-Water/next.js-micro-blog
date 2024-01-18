@@ -28,7 +28,7 @@ const ArticleCard = ({ article, baseUrl }: ArticleCardProps) => {
           {article.title}
         </Link>
         <p className='text-sm pb-3 text-slate-700'>
-          Publish on {article.createdAt && new Date(article.createdAt).toLocaleDateString()}
+          Publish on {article.createdAt.substring(0, 10)}
         </p>
         <Link href={`${baseUrl}articles/${article.id}`} className='text-slate-700 pb-6'>
           {article.content.length > 70 ? article.content.substring(0, 70) + '...' : article.content}
