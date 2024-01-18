@@ -28,9 +28,6 @@ class BlogCreateResponse(BlogBase):
     id: uuid.UUID = Field(..., example="123e4567-e89b-12d3-a456-426614174000")
     createdAt: datetime = Field(..., example="2024-01-15T13:07:45.208Z")
 
-    class Config:
-        orm_mode = True
-
 
 class Blog(BlogBase):
     """

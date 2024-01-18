@@ -7,8 +7,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class BlogService {
@@ -65,14 +67,16 @@ public class BlogService {
      */
     public boolean addBlog(BlogResponse blog) {
         String sql = "INSERT INTO blog (id, title, content, createdAt) VALUES (?, ?, ?, ?)";
+        String uuid = UUID.randomUUID().toString();
+        String now = Instant.now().toString();
 
         try (Connection conn = getConnection();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            pstmt.setString(1, blog.getId());
+            pstmt.setString(1, uuid);
             pstmt.setString(2, blog.getTitle());
             pstmt.setString(3, blog.getContent());
-            pstmt.setString(4, blog.getCreatedAt());
+            pstmt.setString(4, now);
             int affectedRows = pstmt.executeUpdate();
 
             return affectedRows > 0;
