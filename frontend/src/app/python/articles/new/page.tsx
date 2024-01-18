@@ -1,7 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { config } from '@/lib/config';
 
 const CreateBlogPage = () => {
   const router = useRouter();
@@ -14,24 +14,18 @@ const CreateBlogPage = () => {
 
     setLoading(true);
 
-    // リクエストボディにuuidをセット
-    const id = uuidv4();
-
-    const API_URL = process.env.NEXT_PUBLIC_API_URL;
-    await fetch(`${API_URL}/api/blog`, {
+    await fetch(`${config.FRONTEND_PYTHON_API_URL}/python/blog`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        id,
         title,
         content,
       }),
     });
 
     setLoading(false);
-    // リダイレクト機能
     router.push('/python');
     router.refresh();
   };

@@ -1,5 +1,7 @@
+import moment from 'moment-timezone';
 import { config } from '@/lib/config';
 import { NextResponse } from 'next/server';
+import { v4 as uuidv4 } from 'uuid';
 
 export async function GET() {
   try {
@@ -13,13 +15,16 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
-    const { id, title, content } = await req.json();
+    const { title, content } = await req.json();
+
+    const id = uuidv4();
+    const createdAt = moment().tz('Asia/Tokyo').toISOString();
     const response = await fetch(config.JSON_URL!, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ id, title, content, created_at: new Date().toISOString() }),
+      body: JSON.stringify({ id, title, content, createdAt }),
     });
     const data = await response.json();
     return NextResponse.json(data, { status: 201 });

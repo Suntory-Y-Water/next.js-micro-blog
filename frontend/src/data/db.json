@@ -1,28 +1,22 @@
 {
   "articles": [
     {
-      "id": "d2f49df0-4106-44ea-80a2-36971d5485f3",
-      "title": "JavaScriptでの新規投稿",
-      "content": "投稿できたかな？",
-      "createdAt": "2024-01-10T13:31:06.939Z"
+      "id": "71e7d51f-5e68-42d1-8e8d-f3a890598037",
+      "title": "サーバー側でUUIDを生成",
+      "content": "多分問題ない",
+      "createdAt": "2024-01-17T11:14:44.422Z"
     },
     {
-      "id": "a0cfbd14-851d-4c29-8053-372be78f2b0d",
-      "title": "おはようございます。",
-      "content": "無限校長先生",
-      "createdAt": "2024-01-10T22:40:37.657Z"
+      "id": "1e46402f-1609-4095-a573-b9712193f869",
+      "title": "UUID",
+      "content": "aa",
+      "createdAt": "2024-01-18T13:23:59.591Z"
     },
     {
-      "id": "7e76ca0c-da68-44a8-ba4c-941c6f211802",
-      "title": "あああああああああ",
-      "content": "あｓだｓだ",
-      "createdAt": "2024-01-11T12:43:49.470Z"
-    },
-    {
-      "id": "d2f49df0-4106-44ea-80a2-36971dadfd3",
-      "title": "Pythonでの新規投稿",
-      "content": "投稿できたかな？",
-      "createdAt": "2024-01-10T13:31:06.939Z"
+      "id": "8c7c0c5c-edf4-46b0-aae4-db16e9d800fa",
+      "title": "画面遷移してみる",
+      "content": "どうでしょうか？",
+      "createdAt": "2024-01-18T13:35:21.003Z"
     }
   ]
 }

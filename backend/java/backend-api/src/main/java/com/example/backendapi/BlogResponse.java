@@ -13,7 +13,6 @@ public class BlogResponse {
         this.createdAt = createdAt;
     }
 
-    // ゲッター
     public String getId() {
         return id;
     }

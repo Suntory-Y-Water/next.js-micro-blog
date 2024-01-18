@@ -1,29 +1,17 @@
-import DeleteButton from '@/app/components/DeleteButton';
-import Image from 'next/image';
 import React from 'react';
 import { config } from '@/lib/config';
+import ArticleContent from '@/app/components/ArticleContent';
 
-const Article = async ({ params }: { params: { id: string } }) => {
-  const res = await fetch(`${config.API_URL}/api/blog/${params.id}`, { next: { revalidate: 60 } });
+const ArticlePage = async ({ params }: { params: { id: string } }) => {
+  const apiUrl = `${config.PYTHON_API_URL}/python/blog/${params.id}`;
+  const res = await fetch(apiUrl);
   const detailArticle = await res.json();
-
   return (
-    <div className='max-w-3xl mx-auto p-5'>
-      <Image
-        src={`https://source.unsplash.com/collection/1346951/1000x500?sig${detailArticle.id}}`}
-        alt='Article Image'
-        width={1280}
-        height={300}
-      />
-      <h1 className='text-4xl my-10'>{detailArticle.title}</h1>
-      <div className='text-lg leading-relaxed text-justify'>
-        <p>{detailArticle.content}</p>
-      </div>
-      <div className='text-right mt-3'>
-        <DeleteButton id={detailArticle.id} />
-      </div>
-    </div>
+    <ArticleContent
+      params={detailArticle}
+      apiUrl={`${config.FRONTEND_PYTHON_API_URL}/python/blog/${params.id}`}
+    />
   );
 };
 
-export default Article;
+export default ArticlePage;

@@ -1,16 +1,15 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import React from 'react';
-import { config } from '@/lib/config';
 
 type DeleteButtonProps = {
-  id: string;
+  apiUrl: string;
 };
 
-const DeleteButton = ({ id }: DeleteButtonProps) => {
+const DeleteButton = ({ apiUrl }: DeleteButtonProps) => {
   const router = useRouter();
   const handleDelete = async () => {
-    await fetch(`${config.API_URL}/api/blog/${id}`, {
+    await fetch(apiUrl, {
       method: 'DELETE',
     });
 
@@ -20,7 +19,7 @@ const DeleteButton = ({ id }: DeleteButtonProps) => {
 
   return (
     <div
-      className='bg-red-500 hover:bg-red-400 py-3 px-3 font-medium rounded-md inline cursor-pointer'
+      className='bg-red-600 hover:bg-red-500 py-3 px-3 font-medium rounded-md inline cursor-pointer'
       onClick={handleDelete}
     >
       削除する

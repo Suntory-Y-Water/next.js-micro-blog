@@ -1,7 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 
 const CreateBlogPage = () => {
   const router = useRouter();
@@ -14,9 +13,6 @@ const CreateBlogPage = () => {
 
     setLoading(true);
 
-    // リクエストボディにuuidをセット
-    const id = uuidv4();
-
     const API_URL = process.env.NEXT_PUBLIC_API_URL;
     await fetch(`${API_URL}/api/blog`, {
       method: 'POST',
@@ -24,7 +20,6 @@ const CreateBlogPage = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        id,
         title,
         content,
       }),
